@@ -26,8 +26,8 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <main>
+    <>
+      <body>
         <svg
           className='absolute top-0 right-0 z-0'
           viewBox='-150 -50 300 300'
@@ -39,10 +39,7 @@ export default function App() {
             transform='translate(100 0)'
           />
         </svg>
-        <div className='flex py-4 pl-16'>
-          <HiCurrencyDollar size='2rem' color='#FF0066' />
-          <h2 className='text-2xl ml-2 font-extrabold'> Lorem Ipsum</h2>
-        </div>
+
         <div className='absolute top-0 left-0 w-full z-20'>
           <NavBar />
           <BodyHead />
@@ -50,32 +47,31 @@ export default function App() {
           <div data-aos-once='true' data-aos-delay='200' data-aos='fade-down'>
             <AboutBody />
           </div>
-          <div data-aos-once='true' data-aos='fade-down'>
+          <div>
             <FeaturesTab />
           </div>
           <CardCarousel />
+          <Footer />
         </div>
-      </main>
-
-      <footer>
-        {/* <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a> */}
-      </footer>
-    </div>
+      </body>
+    </>
   );
 }
 
 const NavBar = () => {
   const [isHover, setIsHover] = useState(false);
   const [hoverType, setHoverType] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  document.addEventListener('scroll', (e) => {
+    const scrolled = document?.scrollingElement?.scrollTop;
+
+    if (scrolled && scrolled >= 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  });
 
   const showModalNav = (hoverType: number) => {
     switch (hoverType) {
@@ -85,123 +81,75 @@ const NavBar = () => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='absolute top-12 right-10 h-72 w-7/12 p-2 bg-white shadow-xl rounded-md'
+            className='fixed top-14 right-10 z-50 h-72 w-7/12 p-2 border bg-white shadow-xl rounded-md'
           >
             <div className='flex flex-col h-full justify-evenly'>
               <div className='flex justify-evenly'>
-                <div className='flex hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-yellow-600'>
-                      &middot;
-                    </span>{' '}
-                    Labore
-                  </h2>
+                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-600'></div>
+                  <h2 className='text-sm font-bold'>Labore</h2>
                 </div>
 
-                <div className='flex hover:bg-gray-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-gray-600'>
-                      &middot;
-                    </span>{' '}
-                    Recusandae
-                  </h2>
+                <div className='flex items-center hover:bg-gray-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-gray-600'></div>
+                  <h2 className='text-sm font-bold'>Recusandae</h2>
                 </div>
 
-                <div className='flex hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-purple-600'>
-                      &middot;
-                    </span>{' '}
-                    Animi velit
-                  </h2>
+                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-purple-600'></div>
+                  <h2 className='text-sm font-bold'>Animi velit</h2>
                 </div>
 
-                <div className='flex hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-green-300'>
-                      &middot;
-                    </span>{' '}
-                    Ipsum
-                  </h2>
+                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-green-300'></div>
+                  <h2 className='text-sm font-bold'>Ipsum</h2>
                 </div>
               </div>
 
               <div className='flex justify-evenly'>
-                <div className='flex hover:bg-red-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-red-600'>
-                      &middot;
-                    </span>{' '}
-                    Deserun
-                  </h2>
+                <div className='flex items-center hover:bg-red-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-red-600'></div>
+                  <h2 className='text-sm font-bold'>Deserun</h2>
                 </div>
 
-                <div className='flex hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-yellow-300'>
-                      &middot;
-                    </span>{' '}
-                    Adipisicing
-                  </h2>
+                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-300'></div>
+                  <h2 className='text-sm font-bold'>Adipisicing</h2>
                 </div>
 
-                <div className='flex hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-green-600'>
-                      &middot;
-                    </span>{' '}
-                    Eveniet
-                  </h2>
+                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-green-600'></div>
+                  <h2 className='text-sm font-bold'>Eveniet</h2>
                 </div>
 
-                <div className='flex hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-pink-900'>
-                      &middot;
-                    </span>{' '}
-                    Molestiae
-                  </h2>
+                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
+                  <h2 className='text-sm font-bold'>Molestiae</h2>
                 </div>
               </div>
 
               <div className='flex justify-evenly'>
-                <div className='flex hover:bg-indigo-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-indigo-500'>
-                      &middot;
-                    </span>{' '}
-                    Ipsa
-                  </h2>
+                <div className='flex items-center hover:bg-indigo-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-indigo-500'></div>
+                  <h2 className='text-sm font-bold'>Ipsa</h2>
                 </div>
 
-                <div className='flex hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-pink-900'>
-                      &middot;
-                    </span>{' '}
-                    Consectetur
-                  </h2>
+                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
+                  <h2 className='text-sm font-bold'>Consectetur</h2>
                 </div>
 
                 <div className='flex items-center hover:bg-blue-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-blue-400'>
-                      &middot;
-                    </span>{' '}
-                    Lorem
-                  </h2>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-blue-400'></div>
+                  <h2 className='text-sm font-bold'>Lorem</h2>
                   <div className='flex items-center justify-center bg-red-400 rounded-md h-6 w-12 ml-4'>
                     <h2 className='text-xs font-bold text-white'>New</h2>
                   </div>
                 </div>
 
-                <div className='flex hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
-                  <h2 className='text-sm font-bold'>
-                    <span className='align-middle text-4xl text-purple-900'>
-                      &middot;
-                    </span>{' '}
-                    Excepturi
-                  </h2>
+                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                  <div className='h-2 w-2 mr-1 rounded-lg bg-purple-900'></div>
+                  <h2 className='text-sm font-bold'>Excepturi</h2>
                 </div>
               </div>
             </div>
@@ -217,7 +165,7 @@ const NavBar = () => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='absolute top-12 right-10 h-72 w-7/12 p-2 bg-white shadow-xl rounded-md'
+            className='fixed top-14 right-10 z-50 h-72 w-7/12 p-2 border bg-white shadow-xl rounded-md'
           >
             <div className='flex flex-col h-full justify-between'>
               <div className='flex justify-evenly'>
@@ -295,9 +243,16 @@ const NavBar = () => {
     }
   };
 
+  const navBarClass = isScrolled ? 'navScrolled' : 'navNotScrolled';
+  const navItemClass = isScrolled ? 'scrolledNavItem' : 'unScrolledNavItem';
+
   return (
     <>
-      <div className='absolute top-0 right-10 py-2 z-10 bg-transparent'>
+      <div className={navBarClass}>
+        <div className='flex'>
+          <HiCurrencyDollar size='2rem' color='#FF0066' />
+          <h2 className='text-2xl font-extrabold'> Lorem Ipsum</h2>
+        </div>
         <div className='flex items-center'>
           <div className='flex justify-end pr-8 text-white'>
             <div
@@ -305,9 +260,9 @@ const NavBar = () => {
                 setIsHover(true);
                 setHoverType(0);
               }}
-              className='hover:bg-white hover:text-red-500 rounded-md'
+              className={navItemClass}
             >
-              <h1 className='text-sm font-bold py-1 px-4'>Lorem</h1>
+              <h1>Lorem</h1>
             </div>
 
             <div
@@ -315,9 +270,9 @@ const NavBar = () => {
                 setIsHover(true);
                 setHoverType(1);
               }}
-              className='hover:bg-white hover:text-red-500 rounded-md'
+              className={navItemClass}
             >
-              <h1 className='text-sm font-bold py-1 px-4'>Ipsum</h1>
+              <h1>Ipsum</h1>
             </div>
 
             <div
@@ -325,19 +280,21 @@ const NavBar = () => {
                 setIsHover(true);
                 setHoverType(2);
               }}
-              className='hover:bg-white hover:text-red-500 rounded-md cursor-pointer'
+              className={navItemClass}
             >
-              <h1 className='text-sm font-bold py-1 px-4'>Dolor</h1>
+              <h1>Dolor</h1>
             </div>
           </div>
 
-          <div className='flex justify-end text-white'>
-            <div className='rounded-md mr-2 cursor-pointer'>
+          <div className='flex justify-end'>
+            <div className='rounded-md bg-pink-200 opacity-80 hover:bg-pink-300 text-red-900 mr-2 cursor-pointer'>
               <h1 className='text-sm font-bold py-1 px-4'>Login</h1>
             </div>
 
-            <div className='bg-red-400 hover:bg-pink-600 rounded-sm cursor-pointer'>
-              <h1 className='text-sm font-bold py-1 px-4'>Sign Up</h1>
+            <div className='bg-pink-700 hover:bg-pink-600 rounded-md cursor-pointer'>
+              <h1 className='text-white text-sm font-bold py-1 px-4'>
+                Sign Up
+              </h1>
             </div>
           </div>
         </div>
@@ -360,7 +317,7 @@ const BodyHead = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing.
         </h2>
 
-        <div className='flex items-center h-12 w-2/3 bg-gray-50 my-8 px-4 rounded-l shadow-xl border-l-4 border-pink-500 rounded-sm'>
+        <div className='flex items-center h-12 w-2/3 bg-gray-50 my-8 px-4 rounded-l shadow-lg border-l-4 border-pink-500 rounded-sm'>
           <HiOutlineMailOpen size='1.2rem' color='#ee3d9b' />
           <form>
             <input
@@ -372,7 +329,7 @@ const BodyHead = () => {
         </div>
 
         <div className='flex items-center'>
-          <div className='flex justify-center w-32 py-4 my-4 hover:bg-purple-700 bg-purple-500 rounded-md shadow-xl cursor-pointer'>
+          <div className='flex justify-center w-32 py-4 my-4 hover:bg-purple-700 bg-purple-600 rounded-md shadow-lg cursor-pointer'>
             <h3 className='text-sm font-bold text-white'>Get Started</h3>
           </div>
           <h3 className='text-sm font-semibold ml-4 text-gray-400'>
@@ -415,8 +372,10 @@ const AboutBody = () => {
   return (
     <div className='flex justify-center items-center px-32'>
       <div className='flex flex-col'>
-        <h1 className='text-md font-semibold text-purple-600 mb-4'>build</h1>
-        <p className='text-md font-semibold text-gray-600'>
+        <h1 className='text-md font-semibold text-purple-600 mb-4'>
+          collaborate
+        </h1>
+        <p className='text-md font-semibold text-gray-500'>
           Nostrum necessitatibus dolorem corrupti exercitationem eius? Iste
           reiciendis soluta vero, laboriosam nobis eos quaerat, expedita illum
           odit impedit alias voluptatum quo? Recusandae odit dolorem quibusdam.
@@ -446,23 +405,28 @@ const FeaturesTab = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <div className='tabBackground'>
+    <div className='flex flex-col tabBackground'>
+      <h2 className='text-md ml-24 font-semibold text-purple-600 my-8'>
+        design
+      </h2>
       <div className='flex justify-evenly'>
         <div
           onClick={() => {
             setSelectedTab(0);
           }}
-          className='flex items-center'
+          className='flex flex-col mb-8'
         >
-          <div className='flex flex-col mb-8 self-start'>
-            <h3 className='text-md font-semibold text-purple-600'>customize</h3>
+          <h3 className='opacity-0'>.</h3>
+          <div className='flex items-center'>
+            <div className='h-12 w-1 mr-4 bg-white opacity-30 rounded-md'></div>
             <h1 className={selectedTab === 0 ? 'tabSelected' : 'tabTitle'}>
               Dignissimos
             </h1>
-            {selectedTab === 0 && (
-              <div className='h-1 w-24 mt-14 bg-purple-600 rounded-md'></div>
-            )}
           </div>
+
+          {selectedTab === 0 && (
+            <div className='h-1 w-24 ml-6 mt-8 bg-purple-600 rounded-md'></div>
+          )}
         </div>
 
         <div
@@ -527,10 +491,10 @@ const FeaturesTab = () => {
         <div className='flex items-start'>
           <Dashboard />
           <div className='w-1/3 flex flex-col ml-8'>
-            <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
+            <h3 className='text-lg text-white font-bold mb-2 opacity-70'>
               Description
             </h3>
-            <p className='text-sm font-semibold text-white'>
+            <p className='backBlur p-4 text-sm font-semibold text-white'>
               In similique dolore aliquam esse tempora illum fugiat, iusto quam
               asperiores harum iure pariatur beatae. Consectetur totam sequi non
               culpa error minus, blanditiis vitae optio assumenda obcaecati?
@@ -559,7 +523,7 @@ const FeaturesTab = () => {
             <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
               Description
             </h3>
-            <p className='text-sm font-semibold text-white '>
+            <p className='backBlur p-4 text-sm font-semibold text-white'>
               Facilis accusamus fugiat alias dolorum voluptates adipisci velit
               quisquam, beatae temporibus, autem obcaecati dignissimos fuga
               voluptatum laudantium ducimus cupiditate facere aliquam cum ut,
@@ -599,7 +563,7 @@ const FeaturesTab = () => {
             <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
               Description
             </h3>
-            <p className='text-sm font-semibold text-white '>
+            <p className='backBlur p-4 text-sm font-semibold text-white'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               eaque quo possimus dolorem iste, debitis aut autem id fugiat totam
               explicabo ipsam obcaecati veritatis? Unde harum debitis autem
@@ -630,7 +594,7 @@ const FeaturesTab = () => {
             <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
               Description
             </h3>
-            <p className='text-sm font-semibold text-white '>
+            <p className='backBlur p-4 text-sm font-semibold text-white'>
               Reiciendis quo alias libero! Voluptates soluta vitae, itaque vel
               aperiam, inventore aut ipsa quas ab earum quos error dignissimos
               provident totam officiis? Unde sunt aliquid quo. Lorem, ipsum
@@ -658,104 +622,206 @@ const FeaturesTab = () => {
 };
 
 const CardCarousel = () => {
-  const [selectedCard, setSelectedCard] = useState(0);
-
   return (
-    <div className='flex flex-col w-full p-8'>
-      <h3 className='text-xs font-bold text-pink-400 uppercase'>problems</h3>
-      <h1 className='text-4xl font-extrabold my-8 text-black'>Architecto</h1>
+    <div className='flex flex-col ml-24 p-4'>
+      <h3 className='text-xs font-bold mb-8 text-purple-600 uppercase'>
+        problems
+      </h3>
 
       <div className='flex justify-evenly'>
-        <div
-          onClick={() => {
-            setSelectedCard(0);
-          }}
-          className='flex w-min pr-8 rounded-sm border-gray-200 border shadow-2xl'
-        >
-          <div className='h-32 w-1 self-start rounded-b-sm bg-pink-400'></div>
-
-          <div className='flex flex-col items-center justify-end'>
-            <h3 className='transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
-              solution
-            </h3>
-            <div className='h-8 w-1 rounded-t-sm bg-green-400'></div>
-          </div>
-
-          <div className='flex flex-col'>
-            <h2 className='cardTitle'>
-              <span className='text-3xl'>1.</span> <br /> Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit.
-            </h2>
-
-            {selectedCard === 0 && (
-              <p className='text-sm w-full my-4 font-semibold text-gray-400'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                rerum beatae reiciendis sint vero commodi totam a officiis,
-                nisi, sequi veniam sed.
+        <div className='flip-card'>
+          <div className='flip-card-inner'>
+            <div className='flex flip-card-front shadow-xl'>
+              <div className='flex items-center flex-col'>
+                <div className='h-16 w-1 bg-pink-400 rounded-b-md'></div>
+                <p className='transform -rotate-90 text-xs font-bold my-7 text-pink-400 uppercase'>
+                  problem
+                </p>
+              </div>
+              <div className='h-12 w-2 self-end rounded-t-md mt-1 bg-green-400'></div>
+              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+                Totam neque sunt saepe numquam consectetur adipisicing elit
+                beatae?
               </p>
-            )}
+            </div>
+
+            <div className='flex flip-card-back shadow-xl'>
+              <div className='flex self-end items-center flex-col'>
+                <p className='opacity-0'>problem</p>
+                <div className='h-16 w-1 bg-pink-400 rounded-t-md'></div>
+              </div>
+              <div className='flex self-start items-center flex-col'>
+                <p className='absolute top-12 transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
+                  solution
+                </p>
+                <div className='h-12 w-1 end rounded-t-md mb-1 bg-green-400'></div>
+              </div>
+              <p className='p-4 text-left text-sm font-semibold text-gray-600'>
+                Magni inventore veniam eum libero expedita architecto non.
+                Fugiat consequatur omnis, odio ad provident maiores impedit
+                velit quos nulla officiis.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div
-          onClick={() => {
-            setSelectedCard(1);
-          }}
-          className='flex w-min ml-8 pr-8 rounded-sm border-gray-200 border shadow-2xl'
-        >
-          <div className='h-32 w-1 self-start rounded-b-sm bg-pink-400'></div>
-
-          <div className='flex flex-col items-center justify-end'>
-            <h3 className='transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
-              solution
-            </h3>
-            <div className='h-8 w-1 rounded-t-sm bg-green-400'></div>
-          </div>
-
-          <div className='flex flex-col'>
-            <h2 className='cardTitle'>
-              <span className='text-3xl'>2.</span> <br /> Vel ratione sed nulla
-              illo, obcaecati quasi et architecto aut dolor placeat vero quod.
-            </h2>
-
-            {selectedCard === 1 && (
-              <p className='text-sm w-full my-4 font-semibold text-gray-400'>
-                Officiis repellendus unde rem expedita! In incidunt earum
-                nostrum consectetur.
+        <div className='flip-card'>
+          <div className='flip-card-inner'>
+            <div className='flex flip-card-front shadow-xl'>
+              <div className='flex items-center flex-col'>
+                <div className='h-16 w-1 bg-pink-400 rounded-b-md'></div>
+                <p className='transform -rotate-90 text-xs font-bold my-7 text-pink-400 uppercase'>
+                  problem
+                </p>
+              </div>
+              <div className='h-12 w-3 self-end rounded-t-md mt-1 bg-green-400'></div>
+              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+                Veniam debitis placeat. Hic saepe velit tenetur repudiandae
+                magnam pariatur nostrum?
               </p>
-            )}
+            </div>
+
+            <div className='flex flip-card-back shadow-xl'>
+              <div className='flex self-end items-center flex-col'>
+                <p className='opacity-0'>problem</p>
+                <div className='h-16 w-1 bg-pink-400 rounded-t-md'></div>
+              </div>
+              <div className='flex self-start items-center flex-col'>
+                <p className='absolute top-12 transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
+                  solution
+                </p>
+                <div className='h-12 w-1 end rounded-t-md mb-1 bg-green-400'></div>
+              </div>
+              <p className='p-4 text-left text-sm font-semibold text-gray-600'>
+                Magni inventore veniam eum libero expedita architecto non.
+                Fugiat consequatur omnis, odio ad provident maiores impedit
+                velit quos nulla officiis.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div
-          onClick={() => {
-            setSelectedCard(2);
-          }}
-          className='flex w-min ml-8 pr-8 rounded-sm border-gray-200 border shadow-2xl'
-        >
-          <div className='h-32 w-1 self-start rounded-b-sm bg-pink-400'></div>
-
-          <div className='flex flex-col items-center justify-end'>
-            <h3 className='transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
-              solution
-            </h3>
-            <div className='h-8 w-1 rounded-t-sm bg-green-400'></div>
-          </div>
-
-          <div className='flex flex-col'>
-            <h2 className='cardTitle'>
-              <span className='text-3xl'>3.</span> <br /> Itaque, distinctio
-              corporis quisquam impedit animi.
-            </h2>
-
-            {selectedCard === 2 && (
-              <p className='text-sm my-4 font-semibold text-gray-400'>
-                Officiis repellendus unde rem. Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Officia officiis asperiores ipsum.
+        <div className='flip-card'>
+          <div className='flip-card-inner'>
+            <div className='flex flip-card-front shadow-xl'>
+              <div className='flex items-center flex-col'>
+                <div className='h-16 w-1 bg-pink-400 rounded-b-md'></div>
+                <p className='transform -rotate-90 text-xs font-bold my-7 text-pink-400 uppercase'>
+                  problem
+                </p>
+              </div>
+              <div className='h-12 w-2 self-end rounded-t-md mt-1 bg-green-400'></div>
+              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+                Excepturi suscipit optio consequatur soluta magni veniam?
               </p>
-            )}
+            </div>
+
+            <div className='flex flip-card-back shadow-xl'>
+              <div className='flex self-end items-center flex-col'>
+                <p className='opacity-0'>problem</p>
+                <div className='h-16 w-1 bg-pink-400 rounded-t-md'></div>
+              </div>
+              <div className='flex self-start items-center flex-col'>
+                <p className='absolute top-12 transform -rotate-90 text-xs font-bold my-7 text-green-400 uppercase'>
+                  solution
+                </p>
+                <div className='h-12 w-1 end rounded-t-md mb-1 bg-green-400'></div>
+              </div>
+              <p className='p-4 text-left text-sm font-semibold text-gray-600'>
+                Magni inventore veniam eum libero expedita architecto non.
+                Fugiat consequatur omnis, odio ad provident maiores impedit
+                velit quos nulla officiis.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className='flex justify-evenly border-t-2 border-b-2 py-8 my-8'>
+      <div className='flex flex-col'>
+        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+          Aperiam Praesentium
+        </h3>
+        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Voluptates
+        </h3>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Soluta
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Pariatur odit
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Autem accusamus
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Dignissimos quaera
+        </h4>
+      </div>
+
+      <div className='flex flex-col'>
+        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+          Repudiandae provident
+        </h3>
+        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Voluptates
+        </h3>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Soluta
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Pariatur odit
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Autem accusamus
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Lorem
+        </h4>
+      </div>
+
+      <div className='flex flex-col'>
+        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+          Consectetur
+        </h3>
+        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Voluptates
+        </h3>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Soluta
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Pariatur odit
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Autem accusamus
+        </h4>
+      </div>
+
+      <div className='flex flex-col'>
+        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+          Ullam Facilis
+        </h3>
+        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Voluptates
+        </h3>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Soluta
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Pariatur odit
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Autem accusamus
+        </h4>
+        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+          Lorem
+        </h4>
       </div>
     </div>
   );
