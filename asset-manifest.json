@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/landing_page_demo/static/css/main.186cb062.chunk.css",
+    "main.js": "/landing_page_demo/static/js/main.26ed5b54.chunk.js",
+    "main.js.map": "/landing_page_demo/static/js/main.26ed5b54.chunk.js.map",
+    "runtime-main.js": "/landing_page_demo/static/js/runtime-main.1b638063.js",
+    "runtime-main.js.map": "/landing_page_demo/static/js/runtime-main.1b638063.js.map",
+    "static/css/2.cb8ac254.chunk.css": "/landing_page_demo/static/css/2.cb8ac254.chunk.css",
+    "static/js/2.222e56e2.chunk.js": "/landing_page_demo/static/js/2.222e56e2.chunk.js",
+    "static/js/2.222e56e2.chunk.js.map": "/landing_page_demo/static/js/2.222e56e2.chunk.js.map",
+    "index.html": "/landing_page_demo/index.html",
+    "static/css/2.cb8ac254.chunk.css.map": "/landing_page_demo/static/css/2.cb8ac254.chunk.css.map",
+    "static/css/main.186cb062.chunk.css.map": "/landing_page_demo/static/css/main.186cb062.chunk.css.map",
+    "static/js/2.222e56e2.chunk.js.LICENSE.txt": "/landing_page_demo/static/js/2.222e56e2.chunk.js.LICENSE.txt",
+    "static/media/undraw_notes_anim.eba93647.svg": "/landing_page_demo/static/media/undraw_notes_anim.eba93647.svg",
+    "static/media/undraw_team_anim.4d6637d0.svg": "/landing_page_demo/static/media/undraw_team_anim.4d6637d0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b638063.js",
+    "static/css/2.cb8ac254.chunk.css",
+    "static/js/2.222e56e2.chunk.js",
+    "static/css/main.186cb062.chunk.css",
+    "static/js/main.26ed5b54.chunk.js"
+  ]
+}
