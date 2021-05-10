@@ -787,7 +787,7 @@ const CardCarousel = () => {
               <p className='p-4 text-left text-sm font-semibold text-gray-600'>
                 Magni inventore veniam eum libero expedita architecto non.
                 Fugiat consequatur omnis, odio ad provident maiores impedit
-                velit quos nulla officiis.
+                velit quos naulla officiis.
               </p>
             </div>
           </div>
