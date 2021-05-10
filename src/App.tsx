@@ -12,6 +12,7 @@ import {
   HiOutlineColorSwatch,
   HiOutlineMailOpen,
   HiCurrencyDollar,
+  HiMenu,
 } from 'react-icons/hi';
 import Setup from './components/setup';
 import Filing from './components/filing';
@@ -21,16 +22,28 @@ import Notes from './assets/undraw_notes_anim.svg';
 import Team from './assets/undraw_team_anim.svg';
 
 export default function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  document.addEventListener('scroll', (e) => {
+    const scrolled = document?.scrollingElement?.scrollTop;
+
+    if (scrolled && scrolled >= 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  });
 
   return (
     <>
       <body>
         <svg
-          className='absolute top-0 right-0 z-0'
-          viewBox='-150 -50 300 300'
+          className='svgScrolled z-0'
+          viewBox='-145 -45 300 300'
           xmlns='http://www.w3.org/2000/svg'
         >
           <path
@@ -41,7 +54,7 @@ export default function App() {
         </svg>
 
         <div className='absolute top-0 left-0 w-full z-20'>
-          <NavBar />
+          <NavBar isScrolled={isScrolled} />
           <BodyHead />
           <HeaderBreak />
           <div data-aos-once='true' data-aos-delay='200' data-aos='fade-down'>
@@ -58,20 +71,9 @@ export default function App() {
   );
 }
 
-const NavBar = () => {
+const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
   const [isHover, setIsHover] = useState(false);
   const [hoverType, setHoverType] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  document.addEventListener('scroll', (e) => {
-    const scrolled = document?.scrollingElement?.scrollTop;
-
-    if (scrolled && scrolled >= 100) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  });
 
   const showModalNav = (hoverType: number) => {
     switch (hoverType) {
@@ -81,65 +83,65 @@ const NavBar = () => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='fixed top-14 right-10 z-50 h-72 w-7/12 p-2 border bg-white shadow-xl rounded-md'
+            className='fixed top-10 lg:top-14 right-10 z-50 h-72 w-11/12 lg:w-7/12 p-2 border bg-white shadow-xl rounded-md'
           >
             <div className='flex flex-col h-full justify-evenly'>
               <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-600'></div>
                   <h2 className='text-sm font-bold'>Labore</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-gray-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-gray-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-gray-600'></div>
                   <h2 className='text-sm font-bold'>Recusandae</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-purple-600'></div>
                   <h2 className='text-sm font-bold'>Animi velit</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-green-300'></div>
                   <h2 className='text-sm font-bold'>Ipsum</h2>
                 </div>
               </div>
 
               <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-red-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-red-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-red-600'></div>
                   <h2 className='text-sm font-bold'>Deserun</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-300'></div>
                   <h2 className='text-sm font-bold'>Adipisicing</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-green-600'></div>
                   <h2 className='text-sm font-bold'>Eveniet</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
                   <h2 className='text-sm font-bold'>Molestiae</h2>
                 </div>
               </div>
 
               <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-indigo-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-indigo-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-indigo-500'></div>
                   <h2 className='text-sm font-bold'>Ipsa</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
                   <h2 className='text-sm font-bold'>Consectetur</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-blue-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-blue-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-blue-400'></div>
                   <h2 className='text-sm font-bold'>Lorem</h2>
                   <div className='flex items-center justify-center bg-red-400 rounded-md h-6 w-12 ml-4'>
@@ -147,7 +149,7 @@ const NavBar = () => {
                   </div>
                 </div>
 
-                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 cursor-pointer'>
+                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
                   <div className='h-2 w-2 mr-1 rounded-lg bg-purple-900'></div>
                   <h2 className='text-sm font-bold'>Excepturi</h2>
                 </div>
@@ -165,7 +167,7 @@ const NavBar = () => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='fixed top-14 right-10 z-50 h-72 w-7/12 p-2 border bg-white shadow-xl rounded-md'
+            className='fixed top-10 lg:top-14 right-10 z-50 h-72 w-11/12 lg:w-7/12 p-2 border bg-white shadow-xl rounded-md'
           >
             <div className='flex flex-col h-full justify-between'>
               <div className='flex justify-evenly'>
@@ -243,18 +245,29 @@ const NavBar = () => {
     }
   };
 
-  const navBarClass = isScrolled ? 'navScrolled' : 'navNotScrolled';
+  const navBarClass = isScrolled
+    ? 'hidden'
+    : 'flex flex-col lg:flex-row items-center';
   const navItemClass = isScrolled ? 'scrolledNavItem' : 'unScrolledNavItem';
+  const burgerColor = isScrolled ? '#FF0066' : '#FFF';
 
   return (
     <>
-      <div className={navBarClass}>
-        <div className='flex'>
-          <HiCurrencyDollar size='2rem' color='#FF0066' />
-          <h2 className='text-2xl font-extrabold'> Lorem Ipsum</h2>
-        </div>
-        <div className='flex items-center'>
-          <div className='flex justify-end pr-8 text-white'>
+      <div className='navNotScrolled'>
+        {!isScrolled && (
+          <div className='flex'>
+            <HiCurrencyDollar size='2rem' color='#FF0066' />
+            <h2 className='text-lg sm:text-2xl font-extrabold'> Lorem Ipsum</h2>
+          </div>
+        )}
+        <div className='opacity-0'>_</div>
+        {isScrolled && (
+          <button className='cursor-pointer mr-4'>
+            <HiMenu size='1.5rem' color={burgerColor} />
+          </button>
+        )}
+        <div className={navBarClass}>
+          <div className='flex flex-col lg:flex-row justify-end text-white'>
             <div
               onMouseEnter={() => {
                 setIsHover(true);
@@ -286,13 +299,15 @@ const NavBar = () => {
             </div>
           </div>
 
-          <div className='flex justify-end'>
-            <div className='rounded-md bg-pink-200 opacity-80 hover:bg-pink-300 text-red-900 mr-2 cursor-pointer'>
-              <h1 className='text-sm font-bold py-1 px-4'>Login</h1>
+          <div className='flex flex-col lg:flex-row justify-end'>
+            <div className='self-center rounded-md my-2 lg:ml-2 lg:mr-2 bg-pink-200 opacity-80 hover:bg-pink-300 text-red-900 cursor-pointer'>
+              <h1 className='text-xs sm:text-sm font-bold py-1 px-2 sm:px-6'>
+                Login
+              </h1>
             </div>
 
-            <div className='bg-pink-700 hover:bg-pink-600 rounded-md cursor-pointer'>
-              <h1 className='text-white text-sm font-bold py-1 px-4'>
+            <div className='self-center bg-pink-700 hover:bg-pink-600 rounded-md cursor-pointer'>
+              <h1 className='text-white text-xs sm:text-sm font-bold py-1 px-2 sm:px-4'>
                 Sign Up
               </h1>
             </div>
@@ -306,34 +321,38 @@ const NavBar = () => {
 
 const BodyHead = () => {
   return (
-    <div className='flex justify-between mx-16'>
-      <div className='mt-32'>
-        <h1 className='text-5xl text-gray-700 font-bold'>
+    <div className='flex flex-col-reverse sm:flex-row justify-between mx-4 sm:mx-16'>
+      <div className='mt-8 sm:mt-32'>
+        <h1 className='text-xl lg:text-5xl text-gray-700 font-bold'>
           Lorem consectetur,
           <br />
           obcaecati ipsum dolor.
         </h1>
-        <h2 className='text-xl text-gray-500 mt-4 font-medium'>
+        <h2 className='text-lg lg:text-xl text-gray-500 mt-4 font-medium'>
           Lorem ipsum dolor sit amet consectetur adipisicing.
         </h2>
 
-        <div className='flex items-center h-12 w-2/3 bg-gray-50 my-8 px-4 rounded-l shadow-lg border-l-4 border-pink-500 rounded-sm'>
+        <div className='flex items-center h-12 w-56 my-8 rounded-md shadow-lg border-t border-gray-200'>
+          <div className='justify-self-start h-full w-1 mr-1 bg-pink-400 rounded-md'></div>
           <HiOutlineMailOpen size='1.2rem' color='#ee3d9b' />
+
           <form>
             <input
-              className='focus:outline-none focus:border-transparent'
+              className='focus:outline-none focus:border-transparent ml-2'
               type='text'
-              placeholder='  Enter your email address'
+              placeholder='Enter email address'
             />
           </form>
         </div>
 
         <div className='flex items-center'>
-          <div className='flex justify-center w-32 py-4 my-4 hover:bg-purple-700 bg-purple-600 rounded-md shadow-lg cursor-pointer'>
-            <h3 className='text-sm font-bold text-white'>Get Started</h3>
+          <div className='flex justify-center w-24 lg:w-32 py-2 lg:py-4 my-4 hover:bg-purple-700 bg-purple-600 rounded-md shadow-lg cursor-pointer'>
+            <h3 className='text-xs lg:text-sm font-bold text-white'>
+              Get Started
+            </h3>
           </div>
           <h3 className='text-sm font-semibold ml-4 text-gray-400'>
-            Lorem ipsum dolor <br /> sit amet consectetur.
+            Lorem ipsum dolor <br /> sit amet consectetur lorem.
           </h3>
         </div>
 
@@ -343,13 +362,13 @@ const BodyHead = () => {
           <HiStar size='1.2rem' color='#f0d934' />
           <HiStar size='1.2rem' color='#f0d934' />
           <HiStar size='1.2rem' color='#f0d934' />
-          <h2 className='text-xs text-gray-400 font-semibold my-8 ml-2'>
+          <h2 className='text-xs text-gray-400 font-semibold my-8 ml-1 sm:ml-2'>
             Based on 10,000+ reviews
           </h2>
         </div>
       </div>
       <object
-        className='self-center h-2/6 w-2/6'
+        className='sm:self-end lg:self-center mt-20 sm:mt-0 h-3/6 w-3/6 lg:h-2/6 lg:w-2/6'
         data={Team}
         type='image/svg+xml'
         aria-label='team svg'
@@ -360,8 +379,8 @@ const BodyHead = () => {
 
 const HeaderBreak = () => {
   return (
-    <div className='join'>
-      <h3 className='flex justify-center w-full mt-48 text-sm font-bold text-gray-400'>
+    <div className='hidden lg:flex join'>
+      <h3 className='flex justify-center w-full my-24 text-sm font-bold text-gray-400'>
         Join 50,000+ Highly Productive Teams
       </h3>
     </div>
@@ -370,12 +389,12 @@ const HeaderBreak = () => {
 
 const AboutBody = () => {
   return (
-    <div className='flex justify-center items-center px-32'>
+    <div className='flex flex-col lg:flex-row my-24 lg:my-0 justify-center items-center px-4 md:px-10 lg:px-32'>
       <div className='flex flex-col'>
-        <h1 className='text-md font-semibold text-purple-600 mb-4'>
+        <h1 className='text-sm font-semibold text-purple-600 mb-4'>
           collaborate
         </h1>
-        <p className='text-md font-semibold text-gray-500'>
+        <p className='text-sm font-semibold text-gray-500'>
           Nostrum necessitatibus dolorem corrupti exercitationem eius? Iste
           reiciendis soluta vero, laboriosam nobis eos quaerat, expedita illum
           odit impedit alias voluptatum quo? Recusandae odit dolorem quibusdam.
@@ -406,7 +425,7 @@ const FeaturesTab = () => {
 
   return (
     <div className='flex flex-col tabBackground'>
-      <h2 className='text-md ml-24 font-semibold text-purple-600 my-8'>
+      <h2 className='text-sm ml-24 font-semibold text-purple-600 my-8'>
         design
       </h2>
       <div className='flex justify-evenly'>
@@ -639,7 +658,7 @@ const CardCarousel = () => {
                 </p>
               </div>
               <div className='h-12 w-2 self-end rounded-t-md mt-1 bg-green-400'></div>
-              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+              <p className='text-left text-sm text-gray-600 p-4 font-bold'>
                 Totam neque sunt saepe numquam consectetur adipisicing elit
                 beatae?
               </p>
@@ -675,7 +694,7 @@ const CardCarousel = () => {
                 </p>
               </div>
               <div className='h-12 w-3 self-end rounded-t-md mt-1 bg-green-400'></div>
-              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+              <p className='text-left text-sm text-gray-600 p-4 font-bold'>
                 Veniam debitis placeat. Hic saepe velit tenetur repudiandae
                 magnam pariatur nostrum?
               </p>
@@ -711,7 +730,7 @@ const CardCarousel = () => {
                 </p>
               </div>
               <div className='h-12 w-2 self-end rounded-t-md mt-1 bg-green-400'></div>
-              <p className='text-left text-md text-gray-600 p-4 font-bold'>
+              <p className='text-left text-sm text-gray-600 p-4 font-bold'>
                 Excepturi suscipit optio consequatur soluta magni veniam?
               </p>
             </div>
