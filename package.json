@@ -1,7 +1,7 @@
 {
   "name": "landing-page",
+  "homepage": "http://felec.github.io/demo-landing-page",
   "version": "0.1.0",
-  "homepage": "http://felec.github.io/landing-page",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "deploy": "gh-pages -d build",
     "build": "craco build",
+    "deploy": "gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
