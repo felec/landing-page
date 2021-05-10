@@ -6,8 +6,6 @@ const Dashboard = () => {
       id='a684e1c6-71e2-413d-b570-2a7a579de6f7'
       data-name='Layer 1'
       xmlns='http://www.w3.org/2000/svg'
-      width='1029.56255'
-      height='548.69495'
       viewBox='0 0 1029.56255 548.69495'
     >
       <path

@@ -4,8 +4,6 @@ const Decide = () => {
       id='aa6a79dc-91b4-4c18-945f-8bd34f390323'
       data-name='Layer 1'
       xmlns='http://www.w3.org/2000/svg'
-      width='862.67369'
-      height='714.50889'
       viewBox='0 0 862.67369 714.50889'
     >
       <title>decide</title>

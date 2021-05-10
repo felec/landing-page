@@ -83,75 +83,77 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='fixed top-10 lg:top-14 right-10 z-50 h-72 w-11/12 lg:w-7/12 p-2 border bg-white shadow-xl rounded-md'
+            className='fixed top-10 lg:top-14 right-4 md:right-10 z-50 w-11/12 lg:w-7/12 p-2 sm:py-4 border bg-white shadow-xl rounded-md'
           >
-            <div className='flex flex-col h-full justify-evenly'>
-              <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-600'></div>
-                  <h2 className='text-sm font-bold'>Labore</h2>
+            <div className='flex md:flex-col justify-evenly'>
+              <div className='flex flex-col md:flex-row justify-evenly'>
+                <div className='flex justify-center items-center hover:bg-yellow-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-yellow-600'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Labore</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-gray-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-gray-600'></div>
-                  <h2 className='text-sm font-bold'>Recusandae</h2>
+                <div className='flex justify-center items-center hover:bg-gray-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-gray-600'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Recusandae</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-purple-600'></div>
-                  <h2 className='text-sm font-bold'>Animi velit</h2>
+                <div className='flex justify-center items-center hover:bg-purple-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-purple-600'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Animi velit</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-green-300'></div>
-                  <h2 className='text-sm font-bold'>Ipsum</h2>
-                </div>
-              </div>
-
-              <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-red-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-red-600'></div>
-                  <h2 className='text-sm font-bold'>Deserun</h2>
-                </div>
-
-                <div className='flex items-center hover:bg-yellow-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-yellow-300'></div>
-                  <h2 className='text-sm font-bold'>Adipisicing</h2>
-                </div>
-
-                <div className='flex items-center hover:bg-green-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-green-600'></div>
-                  <h2 className='text-sm font-bold'>Eveniet</h2>
-                </div>
-
-                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
-                  <h2 className='text-sm font-bold'>Molestiae</h2>
+                <div className='flex justify-center items-center hover:bg-green-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-green-300'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Ipsum</h2>
                 </div>
               </div>
 
-              <div className='flex justify-evenly'>
-                <div className='flex items-center hover:bg-indigo-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-indigo-500'></div>
-                  <h2 className='text-sm font-bold'>Ipsa</h2>
+              <div className='flex flex-col md:flex-row justify-evenly'>
+                <div className='flex justify-center items-center hover:bg-red-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-red-600'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Deserun</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-pink-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-pink-900'></div>
-                  <h2 className='text-sm font-bold'>Consectetur</h2>
+                <div className='flex justify-center items-center hover:bg-yellow-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-yellow-300'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Adipisicing</h2>
                 </div>
 
-                <div className='flex items-center hover:bg-blue-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-blue-400'></div>
-                  <h2 className='text-sm font-bold'>Lorem</h2>
-                  <div className='flex items-center justify-center bg-red-400 rounded-md h-6 w-12 ml-4'>
-                    <h2 className='text-xs font-bold text-white'>New</h2>
+                <div className='flex justify-center items-center hover:bg-green-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-green-600'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Eveniet</h2>
+                </div>
+
+                <div className='flex justify-center items-center hover:bg-pink-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-pink-900'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Molestiae</h2>
+                </div>
+              </div>
+
+              <div className='flex flex-col md:flex-row justify-evenly'>
+                <div className='flex justify-center items-center hover:bg-indigo-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-indigo-500'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Ipsa</h2>
+                </div>
+
+                <div className='flex justify-center items-center hover:bg-pink-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-pink-900'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Consectetur</h2>
+                </div>
+
+                <div className='flex justify-center items-center hover:bg-blue-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-blue-400'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Lorem</h2>
+                  <div className='flex items-center justify-center bg-red-400 rounded-md h-4 sm:h-6 w-8 sm:w-12 ml-1 sm:ml-4'>
+                    <h2 className='text-xs font-bold text-white lowercase'>
+                      New
+                    </h2>
                   </div>
                 </div>
 
-                <div className='flex items-center hover:bg-purple-100 rounded-md shadow-md h-16 w-40 p-4 mx-2 cursor-pointer'>
-                  <div className='h-2 w-2 mr-1 rounded-lg bg-purple-900'></div>
-                  <h2 className='text-sm font-bold'>Excepturi</h2>
+                <div className='flex justify-center items-center hover:bg-purple-100 rounded-md shadow-md sm:h-16 sm:w-40 px-1 py-3 m-2 border-t cursor-pointer'>
+                  <div className='h-1 sm:h-2 w-1 sm:w-2 mr-1 rounded-lg bg-purple-900'></div>
+                  <h2 className=' text-xs sm:text-sm font-bold'>Excepturi</h2>
                 </div>
               </div>
             </div>
@@ -167,36 +169,42 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
             onMouseLeave={() => {
               setIsHover(false);
             }}
-            className='fixed top-10 lg:top-14 right-10 z-50 h-72 w-11/12 lg:w-7/12 p-2 border bg-white shadow-xl rounded-md'
+            className='fixed top-10 lg:top-14 right-4 md:right-10 z-50 w-11/12 md:h-72 md:w-11/12 lg:w-7/12 p-2 border bg-white shadow-xl rounded-md'
           >
-            <div className='flex flex-col h-full justify-between'>
+            <div className='flex flex-col h-full md:justify-between'>
               <div className='flex justify-evenly'>
                 <div className='flex flex-col hover:bg-purple-100 rounded-md w-60 px-4 py-2 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiOutlineClipboardCheck size='1.5rem' color='#ac33ff' />
-                    <h2 className='text-sm font-bold ml-1'>KLmsl Tjka</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      KLmsl Tjka
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
 
                 <div className='flex flex-col hover:bg-blue-100 rounded-md w-60 px-4 py-2 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiOutlineCloudDownload size='1.5rem' color='#3496f0' />
-                    <h2 className='text-sm font-bold ml-1'>Usk Xkjgf</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      Usk Xkjgf
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
 
                 <div className='flex flex-col hover:bg-yellow-100 rounded-md w-60 px-4 py-2 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiOutlineTicket size='1.5rem' color='#f0d934' />
-                    <h2 className='text-sm font-bold ml-1'>Vero voluptatum</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      Vero voluptatum
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
@@ -204,37 +212,43 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
 
               <div className='flex justify-evenly'>
                 <div className='flex flex-col hover:bg-red-100 rounded-md w-60 px-4 py-2 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiOutlineBriefcase size='1.5rem' color='#ea840a' />
-                    <h2 className='text-sm font-bold ml-1'>Quaerat animi</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      Quaerat animi
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
 
                 <div className='flex flex-col hover:bg-green-100 rounded-md w-60 px-4 py-2 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiViewBoards size='1.5rem' color='#55ee3d' />
-                    <h2 className='text-sm font-bold ml-1'>Laudantium</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      Laudantium
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
 
                 <div className='flex flex-col hover:bg-pink-100 rounded-md px-4 py-2 w-60 cursor-pointer'>
-                  <div className='flex mb-2 items-center'>
+                  <div className='flex flex-col sm:flex-row items-center mb-2'>
                     <HiOutlineColorSwatch size='1.5rem' color='#ee3d9b' />
-                    <h2 className='text-sm font-bold ml-1'>Aliquid minima</h2>
+                    <h2 className='text-sm md:text-sm text-center md:text-left font-bold ml-1'>
+                      Aliquid minima
+                    </h2>
                   </div>
-                  <p className='text-xs font-extralight text-gray-500'>
+                  <p className='text-xs font-extralight text-center sm:text-left text-gray-500'>
                     Lvoluptate provident tenetur, nesciunt nobis aliquam?
                   </p>
                 </div>
               </div>
 
-              <div className='seeAllButton'>
+              <div className='seeAllButton mt-2'>
                 <h2 className='seeAll'>
                   see all features <span className='arrow'>&rarr;</span>
                 </h2>
@@ -262,7 +276,7 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
         )}
         <div className='opacity-0'>_</div>
         {isScrolled && (
-          <button className='cursor-pointer mr-4'>
+          <button className='cursor-pointer mr-4 opacity-50'>
             <HiMenu size='1.5rem' color={burgerColor} />
           </button>
         )}
@@ -301,13 +315,13 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
 
           <div className='flex flex-col lg:flex-row justify-end'>
             <div className='self-center rounded-md my-2 lg:ml-2 lg:mr-2 bg-pink-200 opacity-80 hover:bg-pink-300 text-red-900 cursor-pointer'>
-              <h1 className='text-xs sm:text-sm font-bold py-1 px-2 sm:px-6'>
+              <h1 className='text-xs sm:text-sm font-bold py-1 px-5 sm:px-6 lg:px-4'>
                 Login
               </h1>
             </div>
 
             <div className='self-center bg-pink-700 hover:bg-pink-600 rounded-md cursor-pointer'>
-              <h1 className='text-white text-xs sm:text-sm font-bold py-1 px-2 sm:px-4'>
+              <h1 className='text-white text-xs sm:text-sm font-bold py-1 px-3 sm:px-4'>
                 Sign Up
               </h1>
             </div>
@@ -371,7 +385,7 @@ const BodyHead = () => {
         className='sm:self-end lg:self-center mt-20 sm:mt-0 h-3/6 w-3/6 lg:h-2/6 lg:w-2/6'
         data={Team}
         type='image/svg+xml'
-        aria-label='team svg'
+        aria-label='team'
       ></object>
     </div>
   );
@@ -414,7 +428,7 @@ const AboutBody = () => {
         className='h-96 w-96'
         data={Notes}
         type='image/svg+xml'
-        aria-label='notes svg'
+        aria-label='notes'
       ></object>
     </div>
   );
@@ -425,7 +439,7 @@ const FeaturesTab = () => {
 
   return (
     <div className='flex flex-col tabBackground'>
-      <h2 className='text-sm ml-24 font-semibold text-purple-600 my-8'>
+      <h2 className='text-sm ml-4 lg:ml-24 font-semibold text-purple-600 my-8'>
         design
       </h2>
       <div className='flex justify-evenly'>
@@ -435,16 +449,22 @@ const FeaturesTab = () => {
           }}
           className='flex flex-col mb-8'
         >
-          <h3 className='opacity-0'>.</h3>
-          <div className='flex items-center'>
-            <div className='h-12 w-1 mr-4 bg-white opacity-30 rounded-md'></div>
-            <h1 className={selectedTab === 0 ? 'tabSelected' : 'tabTitle'}>
+          <h3 className='opacity-0'>_</h3>
+          <div className='flex items-center mr-2'>
+            <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
+            <h1
+              className={
+                selectedTab === 0
+                  ? 'tabSelected text-sm sm:text-lg md:text-2xl'
+                  : 'tabTitle text-sm sm:text-lg md:text-2xl'
+              }
+            >
               Dignissimos
             </h1>
           </div>
 
           {selectedTab === 0 && (
-            <div className='h-1 w-24 ml-6 mt-8 bg-purple-600 rounded-md'></div>
+            <div className='h-1 w-8 md:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
           )}
         </div>
 
@@ -455,15 +475,21 @@ const FeaturesTab = () => {
           className='flex flex-col mb-8'
         >
           <h3 className='opacity-0'>.</h3>
-          <div className='flex items-center'>
-            <div className='h-12 w-1 mr-4 bg-white opacity-30 rounded-md'></div>
-            <h1 className={selectedTab === 1 ? 'tabSelected' : 'tabTitle'}>
+          <div className='flex items-center mr-1 md:mr-0'>
+            <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
+            <h1
+              className={
+                selectedTab === 1
+                  ? 'tabSelected text-sm sm:text-lg md:text-2xl'
+                  : 'tabTitle text-sm sm:text-lg md:text-2xl'
+              }
+            >
               Voluptate
             </h1>
           </div>
 
           {selectedTab === 1 && (
-            <div className='h-1 w-24 ml-6 mt-8 bg-purple-600 rounded-md'></div>
+            <div className='h-1 w-8 md:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
           )}
         </div>
 
@@ -474,15 +500,21 @@ const FeaturesTab = () => {
           className='flex flex-col mb-8'
         >
           <h3 className='opacity-0'>.</h3>
-          <div className='flex items-center'>
-            <div className='h-12 w-1 mr-4 bg-white opacity-30 rounded-md'></div>
-            <h1 className={selectedTab === 2 ? 'tabSelected' : 'tabTitle'}>
+          <div className='flex items-center mr-1 md:mr-0'>
+            <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
+            <h1
+              className={
+                selectedTab === 2
+                  ? 'tabSelected text-sm sm:text-lg md:text-2xl'
+                  : 'tabTitle text-sm sm:text-lg md:text-2xl'
+              }
+            >
               Ratione
             </h1>
           </div>
 
           {selectedTab === 2 && (
-            <div className='h-1 w-24 ml-6 mt-8 bg-purple-600 rounded-md'></div>
+            <div className='h-1 w-8 md:w-24 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
           )}
         </div>
 
@@ -493,23 +525,29 @@ const FeaturesTab = () => {
           className='flex flex-col mb-8'
         >
           <h3 className='opacity-0'>.</h3>
-          <div className='flex items-center'>
-            <div className='h-12 w-1 mr-4 bg-white opacity-30 rounded-md'></div>
-            <h1 className={selectedTab === 3 ? 'tabSelected' : 'tabTitle'}>
+          <div className='flex items-center mr-1 lg:mr-0'>
+            <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
+            <h1
+              className={
+                selectedTab === 3
+                  ? 'tabSelected text-sm sm:text-lg md:text-2xl'
+                  : 'tabTitle text-sm sm:text-lg md:text-2xl'
+              }
+            >
               Perspiciatis
             </h1>
           </div>
 
           {selectedTab === 3 && (
-            <div className='h-1 w-24 ml-6 mt-8 bg-purple-600 rounded-md'></div>
+            <div className='h-1 w-8 lg:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
           )}
         </div>
       </div>
 
       {selectedTab === 0 && (
-        <div className='flex items-start'>
+        <div className='flex flex-col lg:flex-row items-start'>
           <Dashboard />
-          <div className='w-1/3 flex flex-col ml-8'>
+          <div className='w-full lg:w-1/3 flex flex-col mx-2 mt-4 lg:mt-0 lg:ml-8'>
             <h3 className='text-lg text-white font-bold mb-2 opacity-70'>
               Description
             </h3>
@@ -536,10 +574,10 @@ const FeaturesTab = () => {
         </div>
       )}
       {selectedTab === 1 && (
-        <div className='flex items-start'>
+        <div className='flex flex-col lg:flex-row items-start'>
           <Decide />
-          <div className='w-1/3 flex flex-col ml-8'>
-            <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
+          <div className='w-full lg:w-1/3 flex flex-col mx-2 mt-4 lg:mt-0 lg:ml-8'>
+            <h3 className='text-lg text-white font-bold mb-2 opacity-70'>
               Description
             </h3>
             <p className='backBlur p-4 text-sm font-semibold text-white'>
@@ -576,10 +614,10 @@ const FeaturesTab = () => {
       )}
 
       {selectedTab === 2 && (
-        <div className='flex items-start'>
+        <div className='flex flex-col lg:flex-row items-start'>
           <Filing />
-          <div className='w-1/3 flex flex-col ml-8'>
-            <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
+          <div className='w-full lg:w-1/3 flex flex-col mx-2 mt-4 lg:mt-0 lg:ml-8'>
+            <h3 className='text-lg text-white font-bold mb-2 opacity-70'>
               Description
             </h3>
             <p className='backBlur p-4 text-sm font-semibold text-white'>
@@ -607,10 +645,10 @@ const FeaturesTab = () => {
       )}
 
       {selectedTab === 3 && (
-        <div className='flex items-start'>
+        <div className='flex flex-col lg:flex-row items-start'>
           <Setup />
-          <div className='w-1/3 flex flex-col ml-8'>
-            <h3 className='text-lg text-white font-bold mb-2 opacity-50'>
+          <div className='w-full lg:w-1/3 flex flex-col mx-2 mt-4 lg:mt-0 lg:ml-8'>
+            <h3 className='text-lg text-white font-bold mb-2 opacity-70'>
               Description
             </h3>
             <p className='backBlur p-4 text-sm font-semibold text-white'>
@@ -642,13 +680,13 @@ const FeaturesTab = () => {
 
 const CardCarousel = () => {
   return (
-    <div className='flex flex-col ml-24 p-4'>
+    <div className='flex flex-col mx-2 p-4'>
       <h3 className='text-xs font-bold mb-8 text-purple-600 uppercase'>
         problems
       </h3>
 
-      <div className='flex justify-evenly'>
-        <div className='flip-card'>
+      <div className='flex flex-col md:flex-row items-center justify-evenly'>
+        <div className='flip-card m-4'>
           <div className='flip-card-inner'>
             <div className='flex flip-card-front shadow-xl'>
               <div className='flex items-center flex-col'>
@@ -675,7 +713,7 @@ const CardCarousel = () => {
                 </p>
                 <div className='h-12 w-1 end rounded-t-md mb-1 bg-green-400'></div>
               </div>
-              <p className='p-4 text-left text-sm font-semibold text-gray-600'>
+              <p className='p-4 text-left text-sm font-semibold text-gray-500'>
                 Magni inventore veniam eum libero expedita architecto non.
                 Fugiat consequatur omnis, odio ad provident maiores impedit
                 velit quos nulla officiis.
@@ -684,7 +722,7 @@ const CardCarousel = () => {
           </div>
         </div>
 
-        <div className='flip-card'>
+        <div className='flip-card m-4'>
           <div className='flip-card-inner'>
             <div className='flex flip-card-front shadow-xl'>
               <div className='flex items-center flex-col'>
@@ -694,7 +732,7 @@ const CardCarousel = () => {
                 </p>
               </div>
               <div className='h-12 w-3 self-end rounded-t-md mt-1 bg-green-400'></div>
-              <p className='text-left text-sm text-gray-600 p-4 font-bold'>
+              <p className='text-left text-sm text-gray-500 p-4 font-bold'>
                 Veniam debitis placeat. Hic saepe velit tenetur repudiandae
                 magnam pariatur nostrum?
               </p>
@@ -711,7 +749,7 @@ const CardCarousel = () => {
                 </p>
                 <div className='h-12 w-1 end rounded-t-md mb-1 bg-green-400'></div>
               </div>
-              <p className='p-4 text-left text-sm font-semibold text-gray-600'>
+              <p className='p-4 text-left text-sm font-semibold text-gray-500'>
                 Magni inventore veniam eum libero expedita architecto non.
                 Fugiat consequatur omnis, odio ad provident maiores impedit
                 velit quos nulla officiis.
@@ -720,7 +758,7 @@ const CardCarousel = () => {
           </div>
         </div>
 
-        <div className='flip-card'>
+        <div className='flip-card m-4'>
           <div className='flip-card-inner'>
             <div className='flex flip-card-front shadow-xl'>
               <div className='flex items-center flex-col'>
@@ -761,86 +799,90 @@ const CardCarousel = () => {
 
 const Footer = () => {
   return (
-    <div className='flex justify-evenly border-t-2 border-b-2 py-8 my-8'>
-      <div className='flex flex-col'>
-        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
-          Aperiam Praesentium
-        </h3>
-        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Voluptates
-        </h3>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Soluta
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Pariatur odit
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Autem accusamus
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Dignissimos quaera
-        </h4>
+    <div className='flex flex-col sm:flex-row justify-evenly border-t-2'>
+      <div className='flex p-4'>
+        <div className='flex flex-col mx-2'>
+          <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+            Aperiam Praesentium
+          </h3>
+          <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Voluptates
+          </h3>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Soluta
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Pariatur odit
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Autem accusamus
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Dignissimos quaera
+          </h4>
+        </div>
+
+        <div className='flex flex-col mx-2'>
+          <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+            Repudiandae provident
+          </h3>
+          <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Voluptates
+          </h3>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Soluta
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Pariatur odit
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Autem accusamus
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Lorem
+          </h4>
+        </div>
       </div>
 
-      <div className='flex flex-col'>
-        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
-          Repudiandae provident
-        </h3>
-        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Voluptates
-        </h3>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Soluta
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Pariatur odit
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Autem accusamus
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Lorem
-        </h4>
-      </div>
+      <div className='flex border-b-2 sm:border-b-0 p-4'>
+        <div className='flex flex-col mr-8 md:mr-4'>
+          <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+            Consectetur Dolor
+          </h3>
+          <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Voluptates
+          </h3>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Soluta
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Pariatur odit
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Autem accusamus
+          </h4>
+        </div>
 
-      <div className='flex flex-col'>
-        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
-          Consectetur
-        </h3>
-        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Voluptates
-        </h3>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Soluta
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Pariatur odit
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Autem accusamus
-        </h4>
-      </div>
-
-      <div className='flex flex-col'>
-        <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
-          Ullam Facilis
-        </h3>
-        <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Voluptates
-        </h3>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Soluta
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Pariatur odit
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Autem accusamus
-        </h4>
-        <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
-          Lorem
-        </h4>
+        <div className='flex flex-col'>
+          <h3 className='text-sm font-bold mb-2 text-purple-500 uppercase'>
+            Ullam Facilis
+          </h3>
+          <h3 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Voluptates
+          </h3>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Soluta
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Pariatur odit
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Autem accusamus
+          </h4>
+          <h4 className='text-sm font-bold mb-2 hover:text-gray-500 text-gray-400 cursor-pointer'>
+            Lorem
+          </h4>
+        </div>
       </div>
     </div>
   );

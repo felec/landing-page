@@ -4,8 +4,6 @@ const Filing = () => {
       id='bb1959b4-201d-4db0-994c-74206432dcb3'
       data-name='Layer 1'
       xmlns='http://www.w3.org/2000/svg'
-      width='952'
-      height='586'
       viewBox='0 0 952 586'
     >
       <path

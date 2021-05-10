@@ -38,21 +38,21 @@
 }
 
 .unScrolledNavItem {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 6px;
   color: white;
-  padding: 0.25rem 1rem 0.25rem 1rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
   cursor: pointer;
 }
 
 .unScrolledNavItem:hover {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: white;
   color: #ff0066;
-  padding: 0.25rem 1rem 0.25rem 1rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
 }
 
 .seeAllButton {
@@ -131,7 +131,6 @@
 }
 
 .tabTitle {
-  font-size: 2rem;
   line-height: 1.5rem;
   font-weight: bold;
   color: white;
@@ -140,7 +139,6 @@
 }
 
 .tabSelected {
-  font-size: 2rem;
   line-height: 1.5rem;
   font-weight: bolder;
   color: white;

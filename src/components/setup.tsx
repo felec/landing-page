@@ -4,8 +4,6 @@ const Setup = () => {
       id='eab38be6-400f-4307-af4c-8f24956b1905'
       data-name='Layer 1'
       xmlns='http://www.w3.org/2000/svg'
-      width='842.16979'
-      height='568.85227'
       viewBox='0 0 842.16979 568.85227'
     >
       <path
