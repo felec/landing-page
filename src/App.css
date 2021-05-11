@@ -93,23 +93,23 @@
 .join::before {
   position: absolute;
   content: '';
-  margin-left: 1.5rem;
+  left: 2rem;
   margin-top: 6.5rem;
   background-color: grey;
   opacity: 0.25;
   height: 1px;
-  width: 35vw;
+  width: 34vw;
 }
 
 .join::after {
   position: absolute;
   content: '';
-  margin-left: 42rem;
+  right: 2rem;
   margin-top: 6.5rem;
   background-color: grey;
   opacity: 0.25;
   height: 1px;
-  width: 35vw;
+  width: 34vw;
 }
 
 .tabBackground {

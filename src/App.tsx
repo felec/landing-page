@@ -321,7 +321,7 @@ const NavBar = ({ isScrolled }: { isScrolled: boolean }) => {
             </div>
 
             <div className='self-center bg-pink-700 hover:bg-pink-600 rounded-md cursor-pointer'>
-              <h1 className='text-white text-xs sm:text-sm font-bold py-1 px-3 sm:px-4'>
+              <h1 className='text-white text-xs sm:text-sm font-bold py-1 px-3 sm:px-4 lg:px-2'>
                 Sign Up
               </h1>
             </div>
@@ -405,7 +405,7 @@ const AboutBody = () => {
   return (
     <div className='flex flex-col lg:flex-row my-24 lg:my-0 justify-center items-center px-4 md:px-10 lg:px-32'>
       <div className='flex flex-col'>
-        <h1 className='text-sm font-semibold text-purple-600 mb-4'>
+        <h1 className='text-sm font-semibold text-purple-600 ml-8 md:ml-0 mb-8'>
           collaborate
         </h1>
         <p className='text-sm font-semibold text-gray-500'>
@@ -449,7 +449,6 @@ const FeaturesTab = () => {
           }}
           className='flex flex-col mb-8'
         >
-          <h3 className='opacity-0'>_</h3>
           <div className='flex items-center mr-2'>
             <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
             <h1
@@ -474,7 +473,6 @@ const FeaturesTab = () => {
           }}
           className='flex flex-col mb-8'
         >
-          <h3 className='opacity-0'>.</h3>
           <div className='flex items-center mr-1 md:mr-0'>
             <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
             <h1
@@ -499,8 +497,7 @@ const FeaturesTab = () => {
           }}
           className='flex flex-col mb-8'
         >
-          <h3 className='opacity-0'>.</h3>
-          <div className='flex items-center mr-1 md:mr-0'>
+          <div className='flex items-center mr-1 lg:mr-0'>
             <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
             <h1
               className={
@@ -509,12 +506,12 @@ const FeaturesTab = () => {
                   : 'tabTitle text-sm sm:text-lg md:text-2xl'
               }
             >
-              Ratione
+              Perspiciatis
             </h1>
           </div>
 
           {selectedTab === 2 && (
-            <div className='h-1 w-8 md:w-24 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
+            <div className='h-1 w-8 lg:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-purple-600 rounded-md'></div>
           )}
         </div>
 
@@ -524,7 +521,6 @@ const FeaturesTab = () => {
           }}
           className='flex flex-col mb-8'
         >
-          <h3 className='opacity-0'>.</h3>
           <div className='flex items-center mr-1 lg:mr-0'>
             <div className='h-4 md:h-12 w-1 mr-1 md:mx-2 bg-white opacity-30 rounded-md'></div>
             <h1
@@ -534,7 +530,7 @@ const FeaturesTab = () => {
                   : 'tabTitle text-sm sm:text-lg md:text-2xl'
               }
             >
-              Perspiciatis
+              Rationale
             </h1>
           </div>
 
@@ -680,8 +676,8 @@ const FeaturesTab = () => {
 
 const CardCarousel = () => {
   return (
-    <div className='flex flex-col mx-2 p-4'>
-      <h3 className='text-xs font-bold mb-8 text-purple-600 uppercase'>
+    <div className='flex flex-col mx-2 lg:mx-16 p-4'>
+      <h3 className='text-xs font-bold mb-8 ml-12 text-purple-600 uppercase'>
         problems
       </h3>
 
