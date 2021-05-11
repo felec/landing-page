@@ -350,7 +350,7 @@ const BodyHead = () => {
           <div className='justify-self-start h-full w-1 mr-1 bg-pink-400 rounded-md'></div>
           <HiOutlineMailOpen size='1.2rem' color='#ee3d9b' />
 
-          <form>
+          <form className='z-0'>
             <input
               className='focus:outline-none focus:border-transparent ml-2'
               type='text'
