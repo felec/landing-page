@@ -676,7 +676,7 @@ const FeaturesTab = () => {
 
 const CardCarousel = () => {
   return (
-    <div className='flex flex-col mx-2 lg:mx-16 p-4'>
+    <div className='flex flex-col mx-2 lg:mx-16 my-20 p-4'>
       <h3 className='text-xs font-bold mb-8 ml-12 text-blue-800 uppercase'>
         problems
       </h3>
@@ -795,17 +795,17 @@ const CardCarousel = () => {
 
 const Parallax = () => {
   return (
-    <div className='background flex justify-evenly items-center h-72'>
+    <div className='background flex justify-evenly px-8 lg:px-0 items-center h-72'>
       <div>
-        <h1 className='text-3xl text-white font-bold'>
+        <h1 className='text-lg lg:text-3xl text-white font-bold'>
           Lorem ipsum dolor sit amet consectetur.
         </h1>
-        <h3 className='text-xl text-white'>
+        <h3 className='text-sm lg:text-xl text-white'>
           Reiciendis, magnam sapiente et sit debitis sed eius.
         </h3>
       </div>
 
-      <button className='bg-blue-800 hover:bg-blue-700 p-4 rounded-md text-white font-bold'>
+      <button className='text-xs lg:text-sm bg-blue-800 hover:bg-blue-700 p-4 ml-4 lg:ml-0 rounded-md text-white font-bold'>
         Get a free Estimate
       </button>
     </div>
