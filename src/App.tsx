@@ -63,7 +63,7 @@ export default function App() {
           <div>
             <FeaturesTab />
           </div>
-          <CardCarousel />
+          <CardsRow />
           <Parallax />
           <Footer />
         </div>
@@ -674,7 +674,7 @@ const FeaturesTab = () => {
   );
 };
 
-const CardCarousel = () => {
+const CardsRow = () => {
   return (
     <div className='flex flex-col mx-2 lg:mx-16 my-20 p-4'>
       <h3 className='text-xs font-bold mb-8 ml-12 text-blue-800 uppercase'>
