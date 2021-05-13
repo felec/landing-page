@@ -511,7 +511,7 @@ const FeaturesTab = () => {
           </div>
 
           {selectedTab === 2 && (
-            <div className='h-1 w-8 lg:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-blue-800 rounded-md'></div>
+            <div className='h-1 w-8 md:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-blue-800 rounded-md'></div>
           )}
         </div>
 
@@ -535,7 +535,7 @@ const FeaturesTab = () => {
           </div>
 
           {selectedTab === 3 && (
-            <div className='h-1 w-8 lg:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-blue-800 rounded-md'></div>
+            <div className='h-1 w-8 md:w-24 ml-2 md:ml-6 mt-2 md:mt-8 bg-blue-800 rounded-md'></div>
           )}
         </div>
       </div>
